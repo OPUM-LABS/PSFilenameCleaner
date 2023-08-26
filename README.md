@@ -130,6 +130,7 @@ This is a program/script that can be easily run without installation.
 - Click on "Run"
 
 ### Detached-Mode
+(Only works with PSFilenameCleaner.**ps1**)
 #### Parameters
 | Parameter    | Type     | Mandatory | Default Value | Description                                                    |
 |--------------|----------|-----------|---------------|----------------------------------------------------------------|
