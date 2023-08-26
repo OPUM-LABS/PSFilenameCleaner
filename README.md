@@ -121,13 +121,13 @@ This is a program/script that can be easily run without installation.
 ## Usage
 (It goes without saying that you must also have the necessary rights to the files to rename them)
 ### GUI-Mode
-- Open PSFilenameCleaner.ps1 (right-click "Run with PowerShell") or PSFilenameCleaner.exe
-- Select your file(s) or directory that cointains your files you want to "clean"
-- Set your filter based on the ASCII-Table (mouseover to show the table)
-  - For compatibility reasons I don't recomment to set te upper limit to a higher number than 127
-- Set the symbols/characters you want to keep
-- Set the symbols/characters you want to replace the incompatible ones with
-- Click on "Run"
+1. Open PSFilenameCleaner.ps1 (right-click "Run with PowerShell") or PSFilenameCleaner.exe
+2. Select your file(s) or directory that cointains your files you want to "clean"
+3. Set your filter based on the ASCII-Table (mouseover to show the table)  
+(For compatibility reasons I don't recomment to set te upper limit to a higher number than 127)
+4. Set the symbols/characters you want to keep
+5. Set the symbols/characters you want to replace the incompatible ones with
+6. Click on "Run"
 
 ### Detached-Mode
 (Only works with PSFilenameCleaner.**ps1**)
