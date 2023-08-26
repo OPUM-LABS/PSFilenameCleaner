@@ -66,6 +66,10 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+          <ul>
+        <li><a href="#gui-mode">GUI-Mode</a></li>
+        <li><a href="#detached-mode">Detached-Mode</a></li>
+      </ul>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -85,6 +89,7 @@ You can do for all selectet users at once:
 ✨ Select individual files or whole folders (inclusive subfolders)  
 ✨ Works recursive through all subfolders  
 ✨ Keep one or more symbols/characters  
+✨ GUI and detached mode (e.g. as a scheduled task)   
 
 ### Built With
 
@@ -114,7 +119,8 @@ This is a program/script that can be easily run without installation.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+(It goes without saying that you must also have the necessary rights to the files to rename them)
+### GUI-Mode
 - Open PSFilenameCleaner.ps1 (right-click "Run with PowerShell") or PSFilenameCleaner.exe
 - Select your file(s) or directory that cointains your files you want to "clean"
 - Set your filter based on the ASCII-Table (mouseover to show the table)
@@ -123,7 +129,32 @@ This is a program/script that can be easily run without installation.
 - Set the symbols/characters you want to replace the incompatible ones with
 - Click on "Run"
 
-(It goes without saying that you must also have the necessary rights to the files)
+### Detached-Mode
+#### Parameters
+| Parameter    | Type     | Mandatory | Default Value | Description                                                    |
+|--------------|----------|-----------|---------------|----------------------------------------------------------------|
+| -Help        | [switch] | no        | $false        | Displays this help.                                            |
+| -Detached    | [switch] | no        | $false        | Run this script in the background.                             |
+| -SourceDir   | [string] | yes       | -             | Define the source folder (recursive) or the source file.       |
+| -LogDir      | [string] | yes       | -             | Define the directory where the log files should be written to. |
+| -ASCIIStart  | [int]    | no        | 0             | Define the first index number of the ASCII-Table.              |
+| -ASCIIEnd    | [int]    | no        | 127           | Define the last index number of the ASCII-Table.               |
+| -AllowChar   | [string] | no        | -             | A description of the AllowChar parameter.                      |
+| -ReplaceChar | [string] | no        | -             | A description of the ReplaceChar parameter.                    |
+
+#### Examples
+- Run with just mandatory parameters (source = directory):
+```powershell
+.\PSFilenameCleaner.ps1 -Detached -SourceDir "C:\tmp\source" -LogDir "C:\tmp\logs"
+```
+- Run with just mandatory parameters (source = file):
+```powershell
+.\PSFilenameCleaner.ps1 -Detached -SourceDir "C:\tmp\source\file.txt" -LogDir "C:\tmp\logs"
+```
+- Run with all parameters:
+```powershell
+.\PSFilenameCleaner.ps1 -Detached -SourceDir "C:\tmp\source" -LogDir "C:\tmp\logs" -ASCIIStart "12" -ASCIIEnd "32" -AllowChar "€©" -ReplaceChar "-"
+```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
