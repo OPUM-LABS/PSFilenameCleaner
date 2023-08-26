@@ -133,7 +133,7 @@ This is a program/script that can be easily run without installation.
 #### Parameters
 | Parameter    | Type     | Mandatory | Default Value | Description                                                    |
 |--------------|----------|-----------|---------------|----------------------------------------------------------------|
-| -Help        | [switch] | no        | $false        | Displays this help.                                            |
+| -Help        | [switch] | no        | $false        | Displays the help page.                                        |
 | -Detached    | [switch] | no        | $false        | Run this script in the background.                             |
 | -SourceDir   | [string] | yes       | -             | Define the source folder (recursive) or the source file.       |
 | -LogDir      | [string] | yes       | -             | Define the directory where the log files should be written to. |
