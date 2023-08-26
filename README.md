@@ -136,12 +136,14 @@ This is a program/script that can be easily run without installation.
 |--------------|----------|-----------|---------------|----------------------------------------------------------------|
 | -Help        | [switch] | no        | $false        | Displays the help page.                                        |
 | -Detached    | [switch] | no        | $false        | Run this script in the background.                             |
-| -SourceDir   | [string] | yes       | -             | Define the source folder (recursive) or the source file.       |
-| -LogDir      | [string] | yes       | -             | Define the directory where the log files should be written to. |
+| -SourceDir   | [string] | yes*      | -             | Define the source folder (recursive) or the source file.       |
+| -LogDir      | [string] | yes*      | -             | Define the directory where the log files should be written to. |
 | -ASCIIStart  | [int]    | no        | 0             | Define the first index number of the ASCII-Table.              |
 | -ASCIIEnd    | [int]    | no        | 127           | Define the last index number of the ASCII-Table.               |
 | -AllowChar   | [string] | no        | -             | A description of the AllowChar parameter.                      |
 | -ReplaceChar | [string] | no        | -             | A description of the ReplaceChar parameter.                    |
+
+*Only if detached!
 
 #### Examples
 - Run with just mandatory parameters (source = directory):
