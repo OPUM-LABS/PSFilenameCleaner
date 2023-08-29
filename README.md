@@ -140,10 +140,10 @@ This is a program/script that can be easily run without installation.
 | -LogDir      | [string] | yes*      | -             | Define the directory where the log files should be written to. |
 | -ASCIIStart  | [int]    | no        | 0             | Define the first index number of the ASCII-Table.              |
 | -ASCIIEnd    | [int]    | no        | 127           | Define the last index number of the ASCII-Table.               |
-| -AllowChar   | [string] | no        | -             | A description of the AllowChar parameter.                      |
-| -ReplaceChar | [string] | no        | -             | A description of the ReplaceChar parameter.                    |
+| -AllowChar   | [string] | no        | -             | Define all allowed characters.                                 |
+| -ReplaceChar | [string] | no        | -             | Define the replace characters.                                 |
 
-*Only if detached!
+*Only mandatory when executed in detached mode (-Detached)!
 
 #### Examples
 - Run with just mandatory parameters (source = directory):
